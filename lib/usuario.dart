@@ -12,6 +12,12 @@ class Usuario{
     _senha = senha;
 }
 
+// ===METODO logar ===
+  bool logar(String? login, String? senha){
+    return _login == login && _senha == senha;
+  }
+
+
 //getters
 //exemplo tradicional
 String? get login{
