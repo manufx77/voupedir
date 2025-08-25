@@ -25,7 +25,7 @@ class Restaurante {
 //getters
 int? get codigo => _codigo;
 String? get nome => _nome;
-double? get lagitude => _latitude;
+double? get latitude => _latitude;
 double? get longitude => _longitude;
 Usuario? get proprietario => _proprietario;
 Tipo? get tipo => _tipo;
@@ -33,7 +33,7 @@ Tipo? get tipo => _tipo;
 //setters
 set codigo(int? novoCodigo) => _codigo = novoCodigo;
 set nome(String? novoNome) => _nome = novoNome;
-set lagitude(double? novaLagitude) => _latitude = novaLagitude;
+set latitude(double? novaLatitude) => _latitude = novaLatitude;
 set longitude(double? novalongitude) => _longitude = novalongitude;
 set proprietario(Usuario? novoProprietario) => _proprietario = novoProprietario;
 set tipo(Tipo? novoTipo) => _tipo = novoTipo;

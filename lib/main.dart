@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projetosflutter/tela_login.dart';
 import 'usuario.dart';
 import 'tipo.dart';
 import 'restaurante.dart';
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    //Criando usuario
+    /*Criando usuario
     Usuario u = Usuario(
       codigo: 1,
       login: "manu123",
@@ -39,10 +40,13 @@ class MyApp extends StatelessWidget {
     );
 
     //Testando login
-    bool loginSucesso = u.logar("manu123", "@senhaforte123");
+    // bool loginSucesso = u.logar("manu123", "@senhaforte123");
 
-    return MaterialApp(
-      home: Scaffold(
+    "no material app coloque isso aqui caso necessario:"
+
+
+
+     home: Scaffold(
         appBar: AppBar(
           title: const Text("Dados do meu restaurante"),
         ),
@@ -52,7 +56,7 @@ class MyApp extends StatelessWidget {
               children: [
                 Text("Código: ${r.codigo}"),
                 Text("Nome: ${r.nome}"),
-                Text("Localização: ${r.lagitude}, ${r.longitude}"),
+                Text("Localização: ${r.latitude}, ${r.longitude}"),
                 Text("Proprietário: ${r.proprietario?.nome}"),
                 Text("Tipo de culinária: ${r.tipo?.nome}"),
                 const SizedBox(height: 20),
@@ -62,6 +66,12 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
+    );
+
+    */
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: TelaLogin(),
     );
   }
 }
