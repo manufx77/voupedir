@@ -2,16 +2,17 @@ import 'package:flutter/material.dart';
 import 'usuario.dart';
 import 'dart:ui';
 import 'tela_home.dart';
+import 'banco/usuario_dao.dart';
 
 class TelaLogin extends StatelessWidget{
   TelaLogin({super.key});
 
-  Usuario u = Usuario(
+  /*Usuario u = Usuario(
       codigo: 1,
       login: "manu",
       nome: "Manu",
       senha: "senhaforte123"
-  );
+  );*/
 
 
   final TextEditingController usuarioConstroller = TextEditingController();
@@ -36,8 +37,11 @@ class TelaLogin extends StatelessWidget{
               controller: senhaController,
             ),
             SizedBox(height: 20),
-            ElevatedButton(onPressed: (){
-              if(u.login == usuarioConstroller.text && u.senha == senhaController.text){
+            ElevatedButton(onPressed: () async {
+
+              final sucesso =await UsuarioDAO.autenticar(usuarioConstroller.text, senhaController.text);
+
+              if(sucesso){
                 Navigator.push(context,
                   MaterialPageRoute(builder: (context) => TelaHome())
                 );
