@@ -15,14 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    /*Criando usuario
-    Usuario u = Usuario(
-      codigo: 1,
-      login: "manu123",
-      nome: "Manu",
-      senha: "@senhaforte123"
-    );
-
+    /*
     //Criando tipo de culinaria
     Tipo t = Tipo(
       codigo: 10,
